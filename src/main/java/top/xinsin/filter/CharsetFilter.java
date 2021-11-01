@@ -6,7 +6,7 @@ import java.io.IOException;
 public class CharsetFilter implements Filter  {
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
-        System.out.println("filter启动");
+        System.out.println("filter启动过滤编码为UTF-8");
     }
 
     @Override
@@ -18,6 +18,6 @@ public class CharsetFilter implements Filter  {
 
     @Override
     public void destroy() {
-        System.out.println("filter关闭");
+        System.out.println("filter关闭过滤编码为默认");
     }
 }

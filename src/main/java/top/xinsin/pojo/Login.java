@@ -11,13 +11,6 @@ public class Login {
         this.password = password;
     }
 
-    public Login(String name, String username, String password, String authority) {
-        this.name = name;
-        this.username = username;
-        this.password = password;
-        this.authority = authority;
-    }
-
     public Login() {
     }
 

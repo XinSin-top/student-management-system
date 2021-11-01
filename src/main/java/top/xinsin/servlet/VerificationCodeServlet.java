@@ -50,11 +50,7 @@ public class VerificationCodeServlet extends HttpServlet {
             g.drawString(String.valueOf(ch),width/5*i,height/2);//将验证码写入
             sb.append(String.valueOf(ch));
         }
-        /*Cookie cookie = new Cookie("code",sb.toString());
-        resp.addCookie(cookie);
-        req.getSession().setAttribute("code",sb.toString());
-        */
-        System.out.println(sb);
+        System.out.println("输出验证码:" + sb);
         g.setColor(new Color(r.nextInt(256),r.nextInt(256),r.nextInt(256)));//设置画笔颜色
         //生成随机干扰线(画10根)
         for (int i = 0; i < 10; i++) {

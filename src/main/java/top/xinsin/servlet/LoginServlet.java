@@ -26,16 +26,9 @@ public class LoginServlet extends HttpServlet {
                 + "content-Type,origin,x-requested-with,content-type,accept,authorization,token,id,X-Custom-Header,X-Cookie,Connection,User-Agent,Cookie,*");
         resp.setHeader("Access-Control-Request-Headers", "Authorization,Origin, X-Requested-With,content-Type,Accept");
         resp.setHeader("Access-Control-Expose-Headers", "*");
-        InputStreamReader inputStreamReader = new InputStreamReader(req.getInputStream());
-        String login = LoginService.login(inputStreamReader);
+        String login = LoginService.login(new InputStreamReader(req.getInputStream()));
 //        resp.setContentType("text/json");
         resp.setCharacterEncoding("utf-8");
-        /*int len;
-        StringBuilder sb = new StringBuilder();
-        while ((len =inputStreamReader.read()) != -1){
-            sb.append((char)len);
-        }
-        System.out.println(sb);*/
         resp.getWriter().write(login);
     }
 }

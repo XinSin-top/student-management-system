@@ -14,3 +14,6 @@
 body{
     background-image: url(../img/bg.png);
 }
+#errorUsername,#errorPassword,#errorCaptcha{
+    color: red;
+}

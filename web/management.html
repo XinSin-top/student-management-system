@@ -8,18 +8,23 @@
     <!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
     <!-- link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous" -->
     <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
-    <link rel="stylesheet" href="./static/css/index.css"/>
+<!--    <link rel="stylesheet" href="./static/css/index.css"/>-->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
     <script src="./static/js/mangement.js"></script>
     <script src="./static/js/cookies.js"></script>
+    <link rel="stylesheet" href="./static/css/mangement.css"/>
     <meta charset="UTF-8">
     <title>大学宿舍管理系统</title>
 </head>
 <body>
 <ul class="nav nav-pills nav-stacked leftdiv">
-    <li role="presentation" class="active"><a href="#">欢迎你：</a></li>
-    <li role="presentation"><a href="#">人员管理</a></li>
-    <li role="presentation"><a href="#">寝室管理</a></li>
+    <li role="presentation" class="active"><a href="#" id="helloHref"></a></li>
 </ul>
+<div id="leftNavigationBar">
+    <ul class="nav nav-pills nav-stacked leftdiv">
+        <li role="presentation"><a href="#">人员管理</a></li>
+        <li role="presentation"><a href="#">寝室管理</a></li>
+    </ul>
+</div>
 </body>
 </html>

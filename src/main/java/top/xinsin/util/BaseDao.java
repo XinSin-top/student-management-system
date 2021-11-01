@@ -42,7 +42,7 @@ public class BaseDao {
     }
 
     //查询公共方法
-    public static ResultSet execute(Connection connection,String sql,Object[] params) throws SQLException {
+    public static ResultSet execute(Connection connection,String sql,Object... params) throws SQLException {
         PreparedStatement preparedStatement = connection.prepareStatement(sql);
         for (int i = 0; i < params.length; i++) {
             preparedStatement.setObject(i + 1 ,params[i]);
