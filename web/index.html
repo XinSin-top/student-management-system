@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!--确保适当的绘制和触屏缩放-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--JQuary3.6.0-->
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
     <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
@@ -19,34 +21,36 @@
 <h1 class="text-center">宿舍管理系统登录</h1>
 <br>
 <br>
-<div class="logindiv">
-    <div class="input-group input-group-sm">
-        <span class="input-group-addon" id="usernamediv">用户名:</span>
-        <input type="text" class="form-control" placeholder="用户名" aria-describedby="usernamediv" id="username" onblur="errorUsername()">
-        <span class="input-group-addon" id="errorUsername"></span>
+<div class="container-fluid">
+    <div class="logindiv">
+        <div class="input-group input-group-sm">
+            <span class="input-group-addon" id="usernamediv">用户名:</span>
+            <input type="text" class="form-control" placeholder="用户名" aria-describedby="usernamediv" id="username" onblur="errorUsername()">
+            <span class="input-group-addon" id="errorUsername"></span>
+        </div>
+        <br>
+        <div class="input-group input-group-sm">
+            <span class="input-group-addon" id="passworddiv">密码:</span>
+            <input type="password" class="form-control" placeholder="密码" aria-describedby="passworddiv" id="password" onblur="errorPassword()">
+            <span class="input-group-addon" id="errorPassword"></span>
+        </div>
+        <br>
+        <div class="input-group input-group-sm">
+            <span class="input-group-addon" id="captchadiv">验证码:</span>
+            <input type="text" class="form-control" placeholder="验证码" aria-describedby="captchadiv" id="captcha" onblur="errorCaptcha()">
+            <span class="input-group-addon" id="errorCaptcha"></span>
+        </div>
+        <br>
+        <div class="col-xs-6 col-md-3">
+            <a href="#" class="thumbnail">
+                <img id="captcha_img" onclick="getcaptcha()">
+            </a>
+            <small>看不清？点图片换一张</small>
+        </div>
+        <button type="button" class="btn btn-default loginbutton" aria-label="Left Align" onclick="login()">
+            <span class="glyphicon glyphicon glyphicon-ok" aria-hidden="true"></span>
+        </button>
     </div>
-    <br>
-    <div class="input-group input-group-sm">
-        <span class="input-group-addon" id="passworddiv">密码:</span>
-        <input type="password" class="form-control" placeholder="密码" aria-describedby="passworddiv" id="password" onblur="errorPassword()">
-        <span class="input-group-addon" id="errorPassword"></span>
-    </div>
-    <br>
-    <div class="input-group input-group-sm">
-        <span class="input-group-addon" id="captchadiv">验证码:</span>
-        <input type="text" class="form-control" placeholder="验证码" aria-describedby="captchadiv" id="captcha" onblur="errorCaptcha()">
-        <span class="input-group-addon" id="errorCaptcha"></span>
-    </div>
-    <br>
-    <div class="col-xs-6 col-md-3">
-        <a href="#" class="thumbnail">
-            <img id="captcha_img" onclick="getcaptcha()">
-        </a>
-        <small>看不清？点图片换一张</small>
-    </div>
-    <button type="button" class="btn btn-default loginbutton" aria-label="Left Align" onclick="login()">
-        <span class="glyphicon glyphicon glyphicon-ok" aria-hidden="true"></span>
-    </button>
 </div>
 </body>
 </html>

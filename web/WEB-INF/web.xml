@@ -20,6 +20,15 @@
         <servlet-name>login</servlet-name>
         <url-pattern>/login</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>PersonnelManagement</servlet-name>
+        <servlet-class>top.xinsin.servlet.PersonnelManagementServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PersonnelManagement</servlet-name>
+        <url-pattern>/person</url-pattern>
+    </servlet-mapping>
     <!--设置过滤所有页面为utf-8 -->
     <filter>
         <filter-name>charset</filter-name>

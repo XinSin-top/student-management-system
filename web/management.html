@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <!--确保适当的绘制和触屏缩放-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--JQuary3.6.0-->
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
     <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
@@ -17,14 +19,34 @@
     <title>大学宿舍管理系统</title>
 </head>
 <body>
-<ul class="nav nav-pills nav-stacked leftdiv">
-    <li role="presentation" class="active"><a href="#" id="helloHref"></a></li>
-</ul>
-<div id="leftNavigationBar">
+<div class="container-fluid">
     <ul class="nav nav-pills nav-stacked leftdiv">
-        <li role="presentation"><a href="#">人员管理</a></li>
-        <li role="presentation"><a href="#">寝室管理</a></li>
+        <li role="presentation" class="active disabled"><a href="#" id="helloHref"></a></li>
     </ul>
+    <div class="row" >
+        <div class="col-xs-1 col-sm-2 col-md-3" id="leftNavigationBar">
+            <ul class="nav nav-pills nav-stacked leftdiv">
+                <li role="presentation"><a href="#" style="background-color: aqua">概览</a></li>
+                <li role="presentation"><a href="/stu/personnel.html">人员管理</a></li>
+                <li role="presentation"><a href="#">寝室管理</a></li>
+                <li role="presentation"><a href="#">提交申请</a></li>
+                <!--下拉菜单-->
+                <li role="presentation" class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                        个人管理<span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li role="presentation"><a href="#">处理请求</a></li>
+                        <li role="presentation"><a href="#">个人信息</a></li>
+                        <li role="presentation"><a href="#">注销登录</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="col-xs-11 col-sm-10 col-md-9" id="operationWindowOnTheRight">
+
+        </div>
+    </div>
 </div>
 </body>
 </html>

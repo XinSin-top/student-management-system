@@ -6,14 +6,6 @@ public class Login {
     private String password;
     private String authority;
 
-    public Login(String username, String password) {
-        this.username = username;
-        this.password = password;
-    }
-
-    public Login() {
-    }
-
     public String getName() {
         return name;
     }
