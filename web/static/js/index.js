@@ -16,19 +16,19 @@ var gettingcaptcha = function(data){
 }
 //ajax get验证码
 var getcaptcha = function(){
-    var url = "/stu/vc";
+    var url = "/web/vc";
     $.get(url,gettingcaptcha);
 }
 //加载
 window.onload = function(){
     //在页面加载完成后获取验证码图片
     getcaptcha();
-    //似乎没啥用
+    //设置需要的cookies为空值
     setCookie("name",name);
     setCookie("auth",auth);
     setCookie("id",id);
     setCookie("user",user);
-    setCookie("isLogin",islogin)
+    setCookie("isLogin",islogin);
 }
 //验证是否为空
 var errorUsername = function(){
@@ -71,7 +71,7 @@ var onLogin = function(data,status){
             setCookie("auth",auth);
             setCookie("user",user);
             setCookie("isLogin",islogin);
-            window.location.href = "/stu/management.html"
+            window.location.href = "/web/management.html"
         }else{
             document.getElementById("errorUsername").innerText = "账号或密码错误,请重试";
             document.getElementById("errorCaptcha").innerText = "";
@@ -88,7 +88,7 @@ var login = function(){
     const Username = UsernameElement.value;
     user = Username;
     const Password = PasswordElement.value;
-    const url = "/stu/login";
+    const url = baseserverurl + "/web/login";
     if(Captcha === capt){
         console.log("captcha done....");
         $.post(url,JSON.stringify({"username":Username,"password":Password}),onLogin,"json"); //这里设置返回类型为json 直接返回json对象

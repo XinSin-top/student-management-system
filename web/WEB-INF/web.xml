@@ -3,6 +3,7 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
+    <!--获取验证码接口-->
     <servlet>
         <servlet-name>VerificationCode</servlet-name>
         <servlet-class>top.xinsin.servlet.VerificationCodeServlet</servlet-class>
@@ -11,7 +12,7 @@
         <servlet-name>VerificationCode</servlet-name>
         <url-pattern>/vc</url-pattern>
     </servlet-mapping>
-    
+    <!--验证登录接口-->
     <servlet>
         <servlet-name>login</servlet-name>
         <servlet-class>top.xinsin.servlet.LoginServlet</servlet-class>
@@ -20,7 +21,7 @@
         <servlet-name>login</servlet-name>
         <url-pattern>/login</url-pattern>
     </servlet-mapping>
-
+    <!--获取人员接口-->
     <servlet>
         <servlet-name>PersonnelManagement</servlet-name>
         <servlet-class>top.xinsin.servlet.PersonnelManagementServlet</servlet-class>
@@ -28,6 +29,24 @@
     <servlet-mapping>
         <servlet-name>PersonnelManagement</servlet-name>
         <url-pattern>/person</url-pattern>
+    </servlet-mapping>
+    <!--获取jvm内存-->
+    <servlet>
+        <servlet-name>ram</servlet-name>
+        <servlet-class>top.xinsin.servlet.RamServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ram</servlet-name>
+        <url-pattern>/ram</url-pattern>
+    </servlet-mapping>
+    <!--人员增删改接口-->
+    <servlet>
+        <servlet-name>CRUD</servlet-name>
+        <servlet-class>top.xinsin.servlet.CRUDServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CRUD</servlet-name>
+        <url-pattern>/crud</url-pattern>
     </servlet-mapping>
     <!--设置过滤所有页面为utf-8 -->
     <filter>
@@ -38,6 +57,7 @@
         <filter-name>charset</filter-name>
         <url-pattern>/</url-pattern>
     </filter-mapping>
+    <!--设置错误跳转页面-->
     <error-page>
         <error-code>404</error-code>
         <location>/static/error/404.html</location>

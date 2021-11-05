@@ -1,52 +1,55 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <!--确保适当的绘制和触屏缩放-->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!--JQuary3.6.0-->
-    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
-    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
-    <!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
-    <!-- link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous" -->
-    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
-<!--    <link rel="stylesheet" href="./static/css/index.css"/>-->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
-    <script src="./static/js/mangement.js"></script>
-    <script src="./static/js/cookies.js"></script>
-    <link rel="stylesheet" href="./static/css/mangement.css"/>
-    <meta charset="UTF-8">
-    <title>大学宿舍管理系统</title>
-</head>
-<body>
-<div class="container-fluid">
-    <ul class="nav nav-pills nav-stacked leftdiv">
-        <li role="presentation" class="active disabled"><a href="#" id="helloHref"></a></li>
-    </ul>
-    <div class="row" >
-        <div class="col-xs-1 col-sm-2 col-md-3" id="leftNavigationBar">
-            <ul class="nav nav-pills nav-stacked leftdiv">
-                <li role="presentation"><a href="#" style="background-color: aqua">概览</a></li>
-                <li role="presentation"><a href="/stu/personnel.html">人员管理</a></li>
-                <li role="presentation"><a href="#">寝室管理</a></li>
-                <li role="presentation"><a href="#">提交申请</a></li>
-                <!--下拉菜单-->
-                <li role="presentation" class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                        个人管理<span class="caret"></span>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li role="presentation"><a href="#">处理请求</a></li>
-                        <li role="presentation"><a href="#">个人信息</a></li>
-                        <li role="presentation"><a href="#">注销登录</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-        <div class="col-xs-11 col-sm-10 col-md-9" id="operationWindowOnTheRight">
-
-        </div>
-    </div>
-</div>
-</body>
+	<head>
+		<!--确保适当的绘制和触屏缩放-->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!--JQuary3.6.0-->
+		<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
+		<!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+		<!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
+		<!-- link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous" -->
+		<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+		<!--有必要导入吗？没必要-->
+	<!--    <link rel="stylesheet" href="./static/css/index.css"/>-->
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+		<script src="./static/js/mangement.js"></script>
+		<script src="./static/js/cookies.js"></script>
+		<script src="./static/plugins/echarts/echarts.min.js"></script>
+		<script src="static/js/server.js"></script>
+		<link rel="stylesheet" href="./static/css/mangement.css"/>
+		<meta charset="UTF-8">
+		<title>大学宿舍管理系统</title>
+	</head>
+	<body>
+		<div class="container-fluid">
+			<ul class="nav nav-pills nav-stacked leftdiv">
+				<li role="presentation" class="active disabled"><a href="#" id="helloHref"></a></li>
+			</ul>
+			<div class="row" >
+				<div class="col-xs-1 col-sm-2 col-md-3" id="leftNavigationBar">
+					<ul class="nav nav-pills nav-stacked leftdiv">
+						<li role="presentation"><a href="#" style="background-color: aqua">概览</a></li>
+						<li role="presentation"><a href="/web/personnel.html" id="userman">人员管理</a></li>
+						<li role="presentation"><a href="#" id="dormman">寝室管理</a></li>
+						<li role="presentation"><a href="#" id="sendre">提交申请</a></li>
+						<!--下拉菜单-->
+						<li role="presentation" class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+								个人管理<span class="caret"></span>
+							</a>
+							<ul class="dropdown-menu">
+								<li role="presentation"><a href="#">处理请求</a></li>
+								<li role="presentation"><a href="#">个人信息</a></li>
+								<li role="presentation"><a href="#" onclick="unlogin()">注销登录</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			<div class="col-xs-11 col-sm-10 col-md-9" id="operationWindowOnTheRight" style="position:absolute;left:25%;right:0;top:0;bottom: 25%;">
+				
+			</div>
+			</div>
+			</div>
+	</body>
 </html>
